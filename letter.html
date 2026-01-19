@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Bestfriend 🤍</title>
+  <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+
+  <!-- Background Music (continue) -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+
+
+  <div class="letter">
+    <h1>For My Bestfriend🤍</h1>
+
+    <p>
+      MY Dear <b>Baby girl</b>,<br><br>
+
+      To the most beautiful girll 
+Wish you manyy more Happy returns of thee dayyy .....
+kab kese kaha start hua pata nahi par yaar 
+thank youu thankk youuu sooo muchhh for coming and being into my lifeeee 🧿....
+Kese they Ham starting mey aur ab dek fully comfortable ............ 
+Hass they rehh yaar u look soo pretty 
+if u laugh Tereko ye makeup wakeup ka jarurat nahi hey
+ vo lipbalm bal set karna ye sab bhi nahi chaiyee bass hass they rehh u look damm Good... 
+ Thank you for the love and comfort u have me and ur giving now also 🫂🧿............ 
+ Tere sat rehta hu tho time hi bohut tej chalra lagta yaar.................
+ Yaad hey mey bolra tha Ghar bej dunga Ghar bej dunga for ur birthday.... 
+ But all i meant was totally opposite of what i said am pata nahi how u took that........
+ meresey jagad mat yarrr plsss tere bin man nahii lagtaaa... 
+ Ladna hey tho Abey ladleyyy ph nahi jana ye sab mat kar yaar......
+ Uk tere bina thoda bhi time nahi jata yaar.. 
+ jab tu ghar jati hey na those are the tuffeat days ... 
+ Achesey bat nahi hota pura din intezar karna padtha..
+ I really miss u more at that timee..
+ Ajj kuch bhi hosakta hey par remember i never wanted to be rude to you never intentionally avoid you..
+ I am soryyy if I do anything wrong!!.... 
+ Once again thank you and many moree happy returns of the dayy Honeyyyy!!!! U mean a lot to meeeee.....🫂🫂💗🧿
+      <br><br>
+
+      Thank you for being you.
+      <br><br>
+
+      Always,<br>
+      <b>Your Vishh</b>
+    </p>
+  </div>
+
+  <script>
+  const music = document.getElementById("bgMusic");
+  const savedTime = localStorage.getItem("musicTime");
+
+  if (savedTime) {
+    music.currentTime = savedTime;
+  }
+
+  music.play(); // play only ONCE manually
+
+  setInterval(() => {
+    localStorage.setItem("musicTime", music.currentTime);
+  }, 1000);
+ </script>
+
+
+</body>
+</html>
