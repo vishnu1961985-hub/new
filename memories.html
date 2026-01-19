@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="memories.css">
+</head>
+<body>
+
+  <!-- Background Music (resume) -->
+  <audio id="bgMusic" src="music.mpeg" autoplay loop></audio>
+
+  <h1>Our Beautiful Memories 🤍</h1>
+
+  <!-- Gallery (auto-filled) -->
+  <div class="gallery" id="gallery"></div>
+
+  <!-- Final Message -->
+  <div class="final-message">
+    <p>
+      No matter how many memories we make,<br>
+      you will always be my favorite one 🤍
+    </p>
+  </div>
+
+  <script>
+    /* ===== MUSIC CONTINUE ===== */
+    const music = document.getElementById("bgMusic");
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) music.currentTime = savedTime;
+    setInterval(() => {
+      localStorage.setItem("musicTime", music.currentTime);
+    }, 1000);
+
+    /* ===== MEMORIES DATA ===== */
+    const memories = [
+      { img: "images/first.jpeg", text: "Our First Image Together ✨" },
+      { img: "images/trip1.jpeg", text: "Our First trip 🌟" },
+      { img: "images/seminar.jpeg", text: "Our First seminar 🤍" },
+      { img: "images/mirror.jpeg", text: "Our First Mirror Image 🌸" },
+      { img: "images/freshers.jpeg", text: "Our Freshers day ✨" },
+      { img: "images/festival.jpeg", text: "Random Festival Together 💖" },
+      { img: "images/korm.jpeg", text: "Our First Kormangala Date 💕" },
+      { img: "images/trip2.jpeg", text: "Our Second Trip 💗" },
+      { img: "images/lab.jpeg", text: "Our Random Lab Memory 💝" },
+      { img: "images/date.jpeg", text: "Our Random Date 💐" },
+      { img: "images/dance.jpeg", text: "Our First Dance 💃" },
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    memories.forEach((m, i) => {
+      const card = document.createElement("div");
+      card.className = "memory-card";
+      card.style.animationDelay = `${i * 1.2}s`;
+
+      card.innerHTML = `
+        <img src="${m.img}" alt="memory">
+        <p>${m.text}</p>
+      `;
+
+      gallery.appendChild(card);
+    });
+  </script>
+
+   <button id="lastBtn" onclick="openLetter()" style="display:none">
+   One Last Thing 🤍
+   </button>
+
+ <script>
+   function openLetter() {
+    window.open("letter.html", "_blank");
+   }
+</script>
+<script>
+  
+  const totalImages = 11;   // change to total images 
+
+  
+  const imageDelay = 1200; 
+  const finalMessageDelay = 2000;
+
+  const totalTime =
+    (totalImages * imageDelay) + finalMessageDelay;
+
+ 
+  setTimeout(() => {
+    document.getElementById("lastBtn").style.display = "block";
+  }, totalTime);
+  </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f6;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  margin: 30px 0;
+  color: #b0005a;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+/* Memory Card */
+.memory-card {
+  width: 320px;
+  opacity: 0;
+  transform: scale(0.85);
+  animation: popIn 1s ease forwards;
+}
+
+.memory-card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.memory-card p {
+  margin-top: 10px;
+  color: #c2185b;
+  font-size: 1rem;
+}
+
+/* Pop animation */
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Final Message */
+.final-message {
+  margin: 70px auto 40px;
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #b0005a;
+  opacity: 0;
+  animation: fadeFinal 2s ease forwards;
+  animation-delay: calc(1.2s * 5); /* adjust if many photos */
+}
+
+@keyframes fadeFinal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#lastBtn {
+  margin: 40px auto 60px;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: #ff5fa2;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #f4de64, #fad0c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #c2185b;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.yes {
+  background: #f96596;
+  color: white;
+}
+
+.no {
+  background: white;
+  color: #c2185b;
+}
